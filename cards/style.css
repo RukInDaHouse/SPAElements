@@ -1,0 +1,259 @@
+.quizcard {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	position: relative;
+	opacity: 0;
+	-webkit-transition: opacity 0.1s ease-in-out;
+			transition: opacity 0.1s ease-in-out;
+}
+
+.loaded.quizcard {
+	opacity: 1;
+}
+
+.quizcard--status {
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	z-index: 2;
+	width: 100%;
+	text-align: center;
+	pointer-events: none;
+}
+
+.quizcard--status i {
+	font-size: 100px;
+	opacity: 0;
+	-webkit-transform: scale(0.3);
+			transform: scale(0.3);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	position: absolute;
+	width: 100px;
+	margin-left: -50px;
+}
+
+.quizcard_love .fa-check {
+	opacity: 0.7;
+	-webkit-transform: scale(1);
+			transform: scale(1);
+}
+
+.quizcard_nope .fa-remove {
+	opacity: 0.7;
+	-webkit-transform: scale(1);
+			transform: scale(1);
+}
+
+.quizcard--cards {
+	-webkit-box-flex: 1;
+	flex-grow: 1;
+	padding-top: 40px;
+	text-align: center;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: end;
+	align-items: flex-end;
+	z-index: 1;
+}
+
+.quizcard--buttons {
+	-webkit-box-flex: 0;
+	flex: 0 0 100px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.quizcard--buttons button {
+	border-radius: 50%;
+	line-height: 60px;
+	width: 60px;
+	border: 0;
+	background: #FFFFFF;
+	display: inline-block;
+	margin: 0 8px;
+	background: #000;
+}
+
+.quizcard--buttons button:focus {
+	outline: 0;
+}
+
+.quizcard--buttons i {
+	font-size: 32px;
+	vertical-align: middle;
+}
+
+.fa-check {
+	color: #089404;
+}
+
+.fa-remove {
+	color: red;
+}
+
+.flip-card {
+	display: inline-block;
+	width: 90vw;
+	max-width: 400px;
+	height: 70vh;
+	text-align: center;
+	margin: 50px auto;
+	position: absolute;
+	-o-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+		transition: all 1s ease-in-out;
+	-o-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+
+}
+.do-flip {
+	-o-transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	-ms-transform: rotateY(-180deg);
+		transform: rotateY(-180deg);
+}
+
+.flip-card .flip-card-front, .flip-card-back{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	-o-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	z-index: 2;
+	background: white;
+	color: #000;
+}
+.flip-card .flip-card-front {
+    border-radius: 7px;
+}
+.flip-card .flip-card-back {
+	border: 1px solid grey;
+	-o-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	height: 100%;
+}
+
+set {
+	display: block;
+	height: 400px;
+	width: 450px;
+	float: left;
+	border: solid 0px black;
+	padding-top: 37px;
+	position: relative;
+}
+
+card {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #FF882A; 
+	display: flex;
+	background-color: white;
+	border-radius:6px;
+}
+
+inner {
+	width: 93%;
+	height: 94%;
+	display: block;
+	border: solid 1px #FF882A;
+	margin: auto;
+	border-radius:3px;
+	position: relative;
+}
+
+middle {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	height: 70%;
+}
+
+middle p {
+	background: transparent;
+	margin-top: 6%;
+	margin-bottom: 6%;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: #000;
+	border-radius:3px;
+	opacity: 0.7;
+	text-align: center;
+	font-weight: 500;
+	position: relative;
+	height: 75%;
+	overflow-wrap: break-word;
+}
+
+.face_text {
+	font-size: 1.5em;
+}
+
+.back_text {
+	font-size: 1.3em;
+	text-align: center;
+}
+
+
+middle p:after {
+	content: '';
+	display: block;
+	height: 100%;
+	width: 100%;
+	opacity: 0.1;
+	position: absolute;
+	top: 0;
+}
+
+bottom {
+	position: absolute;
+	z-index: 5;
+	font-size: 45%;
+	border-radius:3px;
+	border: 1px solid #FF882A;
+	background-color: white;
+	color: #000;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	width: 40%;
+	text-align: center;
+	text-transform: uppercase;
+	left: 50%;
+	margin-left: -20%;
+}
+
+bottom { 
+	bottom: -7px; 
+}
+
+symbol {
+	background-color: #FF882A; 
+	width: 100%; 
+	display: block; 
+	font-size: 6.5em;
+	text-align: center;
+	-webkit-background-clip: text; 
+	-moz-background-clip: text;
+	-o-background-clip: text;
+	background-clip: text; 
+	color: transparent;
+	padding-top: 10%;
+	padding-bottom: 5%;
+}
