@@ -32,8 +32,10 @@
 	opacity: 0;
 	-webkit-transform: scale(0.3);
 			transform: scale(0.3);
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
+	-o-transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+	-webkit-transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+	-ms-transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+		transition: transform 0.5s ease-out, opacity 0.2s ease-out;
 	position: absolute;
 	width: 100px;
 	margin-left: -50px;
@@ -102,20 +104,21 @@
 
 .flip-card {
 	display: inline-block;
-	width: 90vw;
-	max-width: 400px;
-	height: 70vh;
+    width: 700px;
+    height: 460px;
 	text-align: center;
 	margin: 50px auto;
 	position: absolute;
-	-o-transition: all 1s ease-in-out;
-	-webkit-transition: all 1s ease-in-out;
-	-ms-transition: all 1s ease-in-out;
-		transition: all 1s ease-in-out;
+	-o-transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+	-webkit-transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+	-ms-transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+		transition: transform 0.5s ease-out, opacity 0.2s ease-out;
 	-o-transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
 		transform-style: preserve-3d;
+	margin-bottom: 100px;
+	will-change: transform;
 
 }
 .do-flip {
@@ -141,7 +144,6 @@
     border-radius: 7px;
 }
 .flip-card .flip-card-back {
-	border: 1px solid grey;
 	-o-transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
 	-ms-transform: rotateY(180deg);
@@ -149,7 +151,7 @@
 	height: 100%;
 }
 
-set {
+.set {
 	display: block;
 	height: 400px;
 	width: 450px;
@@ -159,7 +161,7 @@ set {
 	position: relative;
 }
 
-card {
+.card {
 	width: 100%;
 	height: 100%;
 	border: 1px solid #FF882A; 
@@ -168,7 +170,7 @@ card {
 	border-radius:6px;
 }
 
-inner {
+.inner {
 	width: 93%;
 	height: 94%;
 	display: block;
@@ -178,7 +180,7 @@ inner {
 	position: relative;
 }
 
-middle {
+.middle {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
@@ -186,7 +188,7 @@ middle {
 	height: 70%;
 }
 
-middle p {
+.middle p {
 	background: transparent;
 	margin-top: 6%;
 	margin-bottom: 6%;
@@ -212,7 +214,7 @@ middle p {
 }
 
 
-middle p:after {
+.middle p:after {
 	content: '';
 	display: block;
 	height: 100%;
@@ -222,7 +224,7 @@ middle p:after {
 	top: 0;
 }
 
-bottom {
+.bottom {
 	position: absolute;
 	z-index: 5;
 	font-size: 45%;
@@ -239,11 +241,11 @@ bottom {
 	margin-left: -20%;
 }
 
-bottom { 
+.bottom { 
 	bottom: -7px; 
 }
 
-symbol {
+.symbol {
 	background-color: #FF882A; 
 	width: 100%; 
 	display: block; 
