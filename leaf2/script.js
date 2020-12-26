@@ -7,10 +7,10 @@ var LeafScene = function(el) {
       numLeaves: 6,
       wind: {
         magnitude: 0,
-        maxSpeed: 12,
-        duration: 300,
+        maxSpeed: 15,
+        duration: 1000,
         start: 0,
-        speed: 10
+        speed: 15
       },
     };
 
