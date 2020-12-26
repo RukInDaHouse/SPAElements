@@ -32,7 +32,7 @@ body, html {
   left: 0;
   width: 20px;
   height: 20px;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/125707/leaf.svg) no-repeat;
+  background: url(../leaf2/leaf.svg) no-repeat;
   background-size: 100%;
   transform-style: preserve-3d;
   -webkit-backface-visibility: visible;
