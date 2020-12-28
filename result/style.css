@@ -1,0 +1,170 @@
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+.falling-leaves {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  z-index: -99999;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.leaf-scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
+.leaf-scene div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: url(../leaf/leaf.svg) no-repeat;
+  background-size: 100%;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.big__leaf__first {
+  -webkit-animation: big__leaf__first__scoping 3s alternate forwards;
+  -moz-animation: big__leaf__first__scoping 3s alternate forwards;
+  animation: big__leaf__first__scoping 3s alternate forwards;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  width: 15px;
+  height: 15px;
+  margin: 0px auto;
+  z-index: 3;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+        -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -o-animation-delay: 3s;
+    animation-delay: 3s;
+  will-change: transform, contents;
+  opacity: 0;
+}
+
+@-webkit-keyframes big__leaf__first__scoping {
+    100% {
+        -webkit-transform:
+                translate3d(0px, -250px, 0) rotate(180deg);
+          width: 250px;
+          height: 250px; 
+          display: none;
+          opacity: 1;
+    }
+
+    0% {
+        -webkit-transform:
+                translate3d(60vw, 580px, 0) rotate(0deg);
+          width: 100px;
+          height: 100px; 
+          opacity: 1;
+    }
+}
+
+.big__leaf__second {
+  -webkit-animation: big__leaf__second__scoping 3s alternate forwards;
+  -moz-animation: big__leaf__second__scoping 3s alternate forwards;
+  animation: big__leaf__second__scoping 3s alternate forwards;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  width: 15px;
+  height: 15px;
+  margin: 0px auto;
+  z-index: 3;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  will-change: transform, contents;
+        -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    animation-delay: 8s;
+    opacity: 0;
+}
+
+@-webkit-keyframes big__leaf__second__scoping {
+    100% {
+        -webkit-transform:
+                translate3d(-70vw, 580px, 0) rotate(-0deg);
+          width: 500px;
+          height: 500px; 
+          display: none;
+          opacity: 1;
+
+    }
+
+    0% {
+        -webkit-transform:
+                translate3d(0px, -600px, 0) rotate(180deg);
+          width: 250px;
+          height: 250px; 
+          opacity: 1;
+
+    }
+}
+
+.fullscreen__leaf {
+  -webkit-animation: fullscreen__leaf__scoping 3s alternate forwards;
+  -moz-animation: fullscreen__leaf__scoping 3s alternate forwards;
+  animation: fullscreen__leaf__scoping 3s alternate forwards;
+
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  z-index: 3;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  will-change: transform, contents;
+        -webkit-animation-delay: 1s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    animation-delay: 12s;
+    opacity: 0;    
+}
+
+@-webkit-keyframes fullscreen__leaf__scoping {
+    100% {
+          width: 400vw;
+          height: 400vh;  
+          -webkit-transform: translate3d(-175vw, -175vh, 0) rotate(180deg);
+          -moz-transform: translate3d(0px, 0px, 0) rotate(180deg);
+          -o-transform: translate3d(0px, 0px, 0) rotate(180deg);
+          opacity: 1;    
+          display: none;
+
+    }
+
+    0% {
+          -webkit-transform: rotate(0deg);
+          margin-left: -500px;
+          width: 500px;
+          height: 500px; 
+          opacity: 1;    
+
+    }
+}
