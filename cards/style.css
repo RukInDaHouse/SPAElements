@@ -5,7 +5,6 @@
 }
 
 .quizcard {
-    width: 100%;
     height: 650px;
     display: flex;
     flex-direction: column;
@@ -49,29 +48,17 @@
     font-weight: 500;
     letter-spacing: 1px;
     cursor: pointer;
+    margin: 20px;
 }
 
 .quizcard--buttons button:focus {
 	outline: 0;
 }
 
-.quizcard--buttons i {
-	font-size: 32px;
-	vertical-align: middle;
-}
-
-.fa-check {
-	color: #089404;
-}
-
-.fa-remove {
-	color: red;
-}
-
 .flip-card {
 	display: inline-block;
-    width: 800px;
-    height: 460px;
+    width: 900px;
+    height: 450px;
 	text-align: center;
 	margin: 50px auto;
 	position: absolute;
@@ -118,16 +105,6 @@
 	height: 100%;
 }
 
-.set {
-	display: block;
-	height: 400px;
-	width: 450px;
-	float: left;
-	border: solid 0px black;
-	padding-top: 37px;
-	position: relative;
-}
-
 .card {
 	width: 100%;
 	height: 100%;
@@ -138,15 +115,14 @@
 }
 
 .inner {
-	width: 93%;
-	height: 94%;
+	width: 100%;
 	border: solid 1px #FF882A;
-	margin: auto;
+	margin: 15px;
 	border-radius: 10px;
 	position: relative;
 		  display: flex;
-  justify-content: center;
-  align-items: center;
+  	justify-content: center;
+  	align-items: center;
 }
 
 .middle {
@@ -193,37 +169,26 @@
 	top: 0;
 }
 
-.bottom {
-	position: absolute;
-	z-index: 5;
-	font-size: 45%;
-	border-radius: 3px;
-	border: 1px solid #FF882A;
-	background-color: white;
-	color: #000;
-	padding-top: 3px;
-	padding-bottom: 3px;
-	width: 40%;
-	text-align: center;
-	text-transform: uppercase;
-	left: 50%;
-	margin-left: -20%;
-}
-
-.bottom { 
-	bottom: -7px; 
+.button:hover {
+  background: #FF882A;
+  color: #FFF;
+  box-shadow: none;
 }
 
 .button {
-    border: 0;
-    border-radius: 4px;
+	position: absolute;
+	z-index: 5;
+	border-radius: 3px;
+	border: 1px solid #FF882A;
+	background: white;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	width: 500px;
+	text-align: center;
+  	letter-spacing: 1px;
+  	bottom: -7px;
+  	transition: 0.3s ease-in-out;
     padding: 7px;
-    color: #000;
-    background: transparent;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1px;
     cursor: pointer;
 }
 
@@ -233,4 +198,8 @@
 
 .yes {
 	background: green;
+}
+
+.hidden {
+	display: none;
 }
