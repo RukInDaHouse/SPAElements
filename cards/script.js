@@ -22,43 +22,31 @@ initCards();
 function createButtonListener(love) {
   return function (event) {
     var cards = document.querySelectorAll('.flip-card:not(.removed)');
-    var moveOutWidth = document.body.clientWidth * 0.3;
+    var next = document.querySelectorAll('.next:not(.removed)');
 
     if (!cards.length) return false;
 
     var card = cards[0];
+    var nextbutton = next[0];
 
     card.classList.add('removed');
+    nextbutton.classList.add('removed');
 
     if (love) {
-      card.style.transform = 'translate(' + moveOutWidth + 'px, -900px) rotate(0deg)';
-    } else if (nope){
+      card.style.zIndex = 1000000000000000000;
+      card.style.transform = 'translate(100vw, -100px) rotate(-30deg)';
+      cards[1].classList.remove('hidden');
+    } else {
       card.classList.toggle('do-flip');
-      card.style.zIndex = 10;
-      document.getElementById('next').onclick = function() {
-        card.style.transform = 'translate(' + moveOutWidth + 'px, 900px) rotate(180deg)';
-  };
-        document.getElementById('nextt').onclick = function() {
-        card.style.transform = 'translate(' + moveOutWidth + 'px, 900px) rotate(180deg)';
-  };
-  document.getElementById('nextth').onclick = function() {
-        card.style.transform = 'translate(' + moveOutWidth + 'px, 900px) rotate(180deg)';
-  };
-    document.getElementById('nextf').onclick = function() {
-        card.style.transform = 'translate(' + moveOutWidth + 'px, 900px) rotate(180deg)';
-  };
-      document.getElementById('nextfo').onclick = function() {
-        card.style.transform = 'translate(' + moveOutWidth + 'px, 900px) rotate(180deg)';
-  };
-        document.getElementById('nextsix').onclick = function() {
-        card.style.transform = 'translate(' + moveOutWidth + 'px, 900px) rotate(180deg)';
+      card.style.zIndex = 1000000000000000000;
+            nextbutton.onclick = function() {
+      card.style.transform = 'translate(-100vw, -100px) rotate(30deg) rotateY(-180deg)';
+      cards[1].classList.remove('hidden');
   };
 
-
-    } 
+    }
 
     initCards();
-
     event.preventDefault();
   };
 }
@@ -70,10 +58,6 @@ var loveListener = createButtonListener(true);
 
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
-
-  document.getElementById('next').onclick = function() {
-  document.getElementById('flip-card').classList.toggle('do-flip');
-  };
 
 
 
