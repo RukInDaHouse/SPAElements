@@ -1,6 +1,12 @@
 var container = document.getElementsByClassName('container');
+var node = document.getElementById("nested");
+
     setTimeout(function(){
-        container[0].classList.add('invisible');
-        container[1].classList.remove('invisible');
-    }, 16000);
+        if (node.parentNode) {
+  node.parentNode.removeChild(node);
+}
+        container[0].classList.remove('invisible');
+    }, 2000);
+
+
 
