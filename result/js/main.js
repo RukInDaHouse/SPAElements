@@ -20,7 +20,7 @@ map[2].onclick = function() {
     setTimeout(function(){
     	var findElement = container[0];
         findElement.parentNode.removeChild(findElement);
-    }, 40000);
+    }, 37000);
 
     setTimeout(function(){
         container[0].classList.remove('invisible');
@@ -30,7 +30,7 @@ map[2].onclick = function() {
         var audio = new Audio(); 
         audio.src = 'volume/ep2.mp3'; 
         audio.autoplay = true;
-    }, 37000);
+    }, 39000);
 
     setTimeout(function(){
         container[2].classList.remove('invisible');
