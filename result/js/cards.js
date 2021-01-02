@@ -39,9 +39,11 @@ function createButtonListener(love) {
     } else {
       card.classList.toggle('do-flip');
       card.style.zIndex = 1000000000000000000;
+      document.getElementById("love").disabled = true;
             nextbutton.onclick = function() {
       card.style.transform = 'translate(-100vw, -100px) rotate(30deg) rotateY(-180deg)';
       cards[1].classList.remove('hidden');
+      document.getElementById("love").disabled = false;
   };
 
     }
