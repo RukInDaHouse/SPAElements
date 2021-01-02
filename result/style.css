@@ -1014,7 +1014,7 @@ body.active .background6 {
   -webkit-animation-timing-function: ease-in;
   -moz-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  z-index: 999999!important;
+  z-index: 2;
 
   will-change: contents;
   opacity: 1;
@@ -1048,7 +1048,7 @@ body.active .background6 {
   -webkit-animation-timing-function: ease-in;
   -moz-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  z-index: 999999!important;
+  z-index: 2;
 
   -webkit-animation-delay: 3s;
   -moz-animation-delay: 3s;
@@ -1087,7 +1087,7 @@ body.active .background6 {
   -webkit-animation-timing-function: ease-in;
   -moz-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  z-index: 999999!important;
+  z-index: 2;
 
   -webkit-animation-delay: 6s;
   -moz-animation-delay: 6s;
@@ -1114,6 +1114,118 @@ body.active .background6 {
           opacity: 1; 
           left: 57%;
           bottom: 32%;    
+
+    }
+}
+
+.step__one__parents {
+  -webkit-animation: step__one__parents__animation 3s alternate forwards;
+  -moz-animation: step__one__parents__animation 3s alternate forwards;
+  animation: step__one__parents__animation 3s alternate forwards;
+
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  z-index: 2;
+
+  will-change: contents;
+  opacity: 1;
+  position: absolute;   
+}
+
+@-webkit-keyframes step__one__parents__animation {
+    100% {
+          width: 120px;
+          height: 120px; 
+          opacity: 0; 
+          left: 720px;
+          bottom: 400px;   
+    }
+
+    0% {
+          width: 120px;
+          height: 120px; 
+          opacity: 1; 
+          left: 720px;
+          bottom: 400px;   
+
+    }
+}
+
+.step__two__parents {
+  -webkit-animation: step__two__parents__animation 3s alternate forwards;
+  -moz-animation: step__two__parents__animation 3s alternate forwards;
+  animation: step__two__parents__animation 3s alternate forwards;
+
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  z-index: 2;
+
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s;
+
+  will-change: contents;
+  opacity: 0;
+  position: absolute;   
+}
+
+@-webkit-keyframes step__two__parents__animation {
+    100% {
+               width: 60px;
+          height: 60px; 
+          opacity: 0; 
+          left: 55%;
+          bottom: 35%;       
+    }
+
+    0% {
+              width: 60px;
+          height: 60px; 
+          opacity: 1; 
+          left: 55%;
+          bottom: 35%;    
+
+    }
+}
+
+.step__three__parents {
+  -webkit-animation: step__three__parents__animation 3s alternate forwards;
+  -moz-animation: step__three__parents__animation 3s alternate forwards;
+  animation: step__three__parents__animation 3s alternate forwards;
+
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  z-index: 2;
+
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  animation-delay: 6s;
+
+  will-change: contents;
+  opacity: 0;
+  position: absolute;  
+}
+
+@-webkit-keyframes step__three__parents__animation {
+    100% {
+          width: 70px;
+          height: 70px; 
+          opacity: 1; 
+          left: 1030px;
+          bottom: 500px;       
+    }
+
+    0% {
+          width: 70px;
+          height: 70px; 
+          opacity: 1; 
+          left: 1030px;
+          bottom: 500px;
 
     }
 }
