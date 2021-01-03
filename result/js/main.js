@@ -3,13 +3,14 @@ var helloscreen = document.getElementsByClassName('helloscreen');
 var container = document.getElementsByClassName('container');
 var audio = document.getElementsByTagName('audio');
 var arrow = document.getElementsByClassName('arrownext');
+var header = document.getElementsByClassName('headercontainer');
 
 
 map[2].onclick = function() {
     var audio = new Audio(); 
     audio.src = 'volume/ep1.mp3'; 
     audio.autoplay = true; 
-    
+    header[0].classList.add('invisible');
     helloscreen[0].classList.add('invisible');
 
     setTimeout(function(){
@@ -32,13 +33,6 @@ map[2].onclick = function() {
         audio.autoplay = true;
     }, 39000);
 
-    setTimeout(function(){
-        container[2].classList.remove('invisible');
-    }, 38000);
-
-    setTimeout(function(){
-        container[3].classList.remove('invisible');
-    }, 44000);
 }
 
 map[0].onclick = function() {  
@@ -49,4 +43,16 @@ arrow[0].onclick = function() {
     var findElement = container[0];
     findElement.parentNode.removeChild(findElement);
     container[0].classList.remove('invisible');
+
+    setTimeout(function(){
+        map[2].classList.remove('invisible');
+        map[2].classList.add('fullscreen__leaf');
+    }, 6000);
+
+    setTimeout(function(){
+        var findElement = container[0];
+        findElement.parentNode.removeChild(findElement);
+        container[0].classList.remove('invisible');
+    }, 9000);
 }
+
