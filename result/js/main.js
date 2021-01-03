@@ -49,4 +49,9 @@ arrow[0].onclick = function() {
     var findElement = container[0];
     findElement.parentNode.removeChild(findElement);
     container[0].classList.remove('invisible');
+
+    setTimeout(function(){
+    var findElement = container[0];
+        findElement.parentNode.removeChild(findElement);
+    }, 4000);
 }
