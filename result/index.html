@@ -8,7 +8,69 @@
 
 </head>
 <body>
-
+ <header>
+        <div class='headercontainer'>
+            <div class='mobile_nav'>
+                <button class='burger' title='Open and close menu'>
+                <span class='mobile_nav__label'>Open and close menu</span>
+                <div class='top stripe'></div>
+                <div class='middle stripe'></div>
+                <div class='bottom stripe'></div>
+                </button>
+            </div>
+        <div class='mobile_menu'>
+            <nav>
+                <ul>
+                    <li class='visited'>
+                        <a href='/home' class="menu__link r-link">Карты</a>
+                    </li>
+                    <li>
+                        <a href='/toplist' class="menu__link r-link">Обратная связь</a>
+                    </li>
+                    <li>
+                        <a href='/forum' class="menu__link r-link">О нас</a>
+                    </li>
+                    <li>
+                        <a href='/blog' class="menu__link r-link">Истории</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class='logo'>
+            <span><img src="images/logo.svg"></span>
+        </div>
+            <nav role="navigation" class="primary-navigation menu head_nav withoutline">
+                <ul class="r-list">
+                    <li>
+                        <a class="menu__link r-link" href="#">Карты &dtrif;</a>
+                        <ul class="dropdown">
+                            <li>
+                                <a class="menu__link r-link" href="#">Карта</a>
+                            </li>
+                            <li>
+                                <a class="menu__link r-link" href="#">Карта</a>
+                            </li>
+                            <li>
+                                <a class="menu__link r-link" href="#">Карта</a>
+                            </li>
+                            <li>
+                                <a class="menu__link r-link" href="#">Карта</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="menu__link r-link" href='/toplist'>Обратная связь</a>
+                    </li>
+                    <li>
+                        <a class="menu__link r-link" href='/forum'>О нас</a>
+                    </li>
+                    <li>
+                        <a class="menu__link r-link" href='/blog'>Истории</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 <div class="container falling-leaves" onclick="document.body.classList.add('active')">
     <div class="ratio16-9 map">
         <div class="popup-wrapper">
@@ -268,8 +330,8 @@
 
 		<svg class="cloud small slow" viewBox="0 0 762 331"><defs/><path fill="#FFF" d="M715 228h-16l1-16a106 106 0 00-130-103 162 162 0 00-313 40 94 94 0 00-132 79H47c-26 0-47 23-47 52s21 51 47 51h668c26 0 47-23 47-51s-21-52-47-52z"/></svg>
 	</div>
-	<div class="step__one">
-    	<img src="../result/images/fullplaneman.svg">
+    <div class="step__one">
+      <img src="../result/images/pers.svg">
     </div>
     <div class="step__two">
     	<img src="../result/images/fullplaneman.svg">
@@ -277,7 +339,31 @@
     <div class="step__three">
     	<img src="../result/images/fullplaneman.svg">
     </div>
+    <div class="map invisible">
+      <img src="../result/images/leaf.svg">
+    </div>
 </div>
+
+<div class="container invisible">
+    <div class="mapbackgroundimage">
+      <img src="../result/images/parents.svg">
+    </div>
+
+        <div class="fullscreen__leaf__away">
+      <img src="../result/images/leaf.svg">
+    </div>
+    
+    <div class="step__one__parents">
+      <img src="../result/images/pers.svg">
+    </div>
+    <div class="step__two__parents">
+      <img src="../result/images/fullplaneman.svg">
+    </div>
+    <div class="step__three__parents">
+      <img src="../result/images/fullplaneman.svg">
+    </div>
+
+  </div>
 
 	<script  src="../result/js/leaf.js"></script>
 	<script  src="../result/js/main.js"></script>
