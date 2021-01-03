@@ -490,7 +490,7 @@ nav.primary-navigation ul li ul li {
 
     100% {
         -webkit-transform:
-                translate3d(2000px, 400px, 0) rotate(-0deg);
+                translate3d(-3000px, 400px, 0) rotate(-280deg);
           width: 500px;
           height: 500px; 
           opacity: 1;    
@@ -1350,6 +1350,31 @@ body.active .background6 {
   right: 0;
   bottom: 0;
 
+}
+
+.step__zero {
+  -webkit-animation: step__zero__animation 3s alternate forwards;
+  -moz-animation: step__zero__animation 3s alternate forwards;
+  animation: step__zero__animation 3s alternate forwards;
+
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  width: 100%;
+  will-change: contents;
+  opacity: 0;
+  position: absolute;   
+}
+
+@-webkit-keyframes step__zero__animation {
+    100% {
+          opacity: 1;   
+    }
+
+    0% {
+          opacity: 0;    
+
+    }
 }
 
 .step__one {

@@ -12,6 +12,8 @@ map[2].onclick = function() {
     audio.autoplay = true; 
     header[0].classList.add('invisible');
     helloscreen[0].classList.add('invisible');
+    map[5].classList.remove('invisible');
+    map[5].classList.add('step__zero');
 
     setTimeout(function(){
     	map[4].classList.remove('invisible');
