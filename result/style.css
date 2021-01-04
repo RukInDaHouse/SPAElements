@@ -13,7 +13,7 @@ header .headercontainer {
   transition: 0.3s;
   position: fixed;
   top: 0;
-  background: #FF882A;
+  background: #FFFFFF;
   
 }
 
@@ -703,6 +703,13 @@ nav.primary-navigation ul li ul li {
   will-change: transform;
 }
 
+.dont-flip {
+  -o-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
 .do-flip {
   -o-transform: rotateY(-180deg);
   -webkit-transform: rotateY(-180deg);
@@ -835,7 +842,13 @@ nav.primary-navigation ul li ul li {
   display: none;
 }
 
-
+.planewithnameimage {
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0%)
+}
 
 
 .mapbackgroundimage {
@@ -1360,6 +1373,13 @@ body.active .background6 {
   -webkit-animation-timing-function: ease-in;
   -moz-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+
+  -webkit-animation-delay: 18s;
+  -moz-animation-delay: 18s;
+  -o-animation-delay: 18s;
+  animation-delay: 18s;
+
+  animation-fill-mode:forwards;
   width: 100%;
   will-change: contents;
   opacity: 0;
@@ -1581,5 +1601,61 @@ body.active .background6 {
           left: 1030px;
           bottom: 590px;
 
+    }
+}
+
+.zoom__map__first__scene {
+  -webkit-animation: zoom__map__first__scene__animation 15s alternate forwards;
+  -moz-animation: zoom__map__first__scene__animation 15s alternate forwards;
+  animation: zoom__map__first__scene__animation 15s alternate forwards;
+
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+  animation-delay: 3s;
+
+  will-change: contents;
+  position: absolute;  
+}
+
+@-webkit-keyframes zoom__map__first__scene__animation {
+    100% {
+    transform: scale(1) translate(0%, 0%);
+    }
+
+    95% {
+    transform: scale(1) translate(0%, 0%);     
+    }
+
+    85% {
+    transform: scale(1.2) translate(200px, 50px);    
+    }
+
+    70% {
+    transform: scale(1) translate(0%, 0%);     
+    }
+
+    60% {
+    transform: scale(1.2) translate(-100px, 20px);     
+    }
+
+    45% {
+    transform: scale(1) translate(0%, 0%);     
+    }
+
+    35% {
+    transform: scale(1.2) translate(-200px, 20px);    
+    }
+
+    20% {
+    transform: scale(1) translate(0%, 0%);     
+    }
+
+    10% {
+    transform: scale(1.2) translate(-100px, -100px);    
     }
 }
