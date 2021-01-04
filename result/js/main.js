@@ -25,17 +25,17 @@ map[2].onclick = function() {
     setTimeout(function(){
     	var findElement = container[0];
         findElement.parentNode.removeChild(findElement);
-    }, 37000);
+    }, 36000);
 
     setTimeout(function(){
         container[0].classList.remove('invisible');
-    }, 37000);
+    }, 36000);
 
     setTimeout(function(){
         var audio = new Audio(); 
         audio.src = 'volume/ep2.mp3'; 
         audio.autoplay = true;
-    }, 39000);
+    }, 38000);
 
 }
 
@@ -44,6 +44,23 @@ map[0].onclick = function() {
 }
 
 arrow[0].onclick = function() {  
+    var findElement = container[0];
+    findElement.parentNode.removeChild(findElement);
+    container[0].classList.remove('invisible');
+
+    setTimeout(function(){
+        map[2].classList.remove('invisible');
+        map[2].classList.add('fullscreen__leaf');
+    }, 6000);
+
+    setTimeout(function(){
+        var findElement = container[0];
+        findElement.parentNode.removeChild(findElement);
+        container[0].classList.remove('invisible');
+    }, 9000);
+}
+
+arrow[1].onclick = function() {  
     var findElement = container[0];
     findElement.parentNode.removeChild(findElement);
     container[0].classList.remove('invisible');
