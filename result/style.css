@@ -386,6 +386,43 @@ nav.primary-navigation ul li ul li {
   }
 }
 
+.bigcontainer {
+  position: absolute;
+  left: 50%;
+  cursor: pointer;
+  margin-right: -50%;
+  transform: translate(-50%, 0%);
+  max-width: 1440px;
+  min-width: 1024px;
+  min-height: 576px;
+  max-height: 810px;
+  overflow: hidden;
+  margin-top: 0px;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1023px) {
+  .bigcontainer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .bigcontainer {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .bigcontainer {
+    width: 1440px;
+    height: 810px;
+  }
+}
+
 .background {
   width: 100%;
   height: 100%;
@@ -426,12 +463,14 @@ nav.primary-navigation ul li ul li {
   -webkit-animation-timing-function: ease-in;
   -moz-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
+  z-index: 999999!important;
 
   transform-style: preserve-3d;
   -webkit-backface-visibility: visible;
           backface-visibility: visible;
   will-change: transform, contents;
-  opacity:1;    
+  opacity:1; 
+  position: absolute;   
 }
 
 @-webkit-keyframes fullscreen__leaf__scoping {
@@ -1531,7 +1570,12 @@ body.active .background6 {
   width: 100%;
   will-change: contents;
   opacity: 1;
-  position: absolute;   
+  position: absolute;  
+
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -o-animation-delay: 3s;
+    animation-delay: 3s; 
 }
 
 @-webkit-keyframes step__one__parents__animation {
@@ -1557,33 +1601,28 @@ body.active .background6 {
   animation-timing-function: ease-in;
   z-index: 2;
 
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  animation-delay: 3s;
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  -o-animation-delay: 6s;
+  animation-delay: 6s;
 
   will-change: contents;
-  opacity: 1;
-  position: absolute;   
+  opacity: 0;
+  position: absolute;  
+  width: 140px;
+  height: 140px; 
+  left: 220px;
+  bottom: 480px;   
 }
 
 @-webkit-keyframes step__two__parents__animation {
-    100% {
-          width: 120px;
-          height: 120px; 
-          opacity: 0; 
-          left: 720px;
-          bottom: 400px;   
-    }
+    100% { 
+    opacity: 0;  
+  }
 
     0% {
-          width: 120px;
-          height: 120px; 
-          opacity: 1; 
-          left: 720px;
-          bottom: 400px;   
-
-    }
+    opacity: 1; 
+  }
 }
 
 .step__three__parents {
@@ -1596,31 +1635,29 @@ body.active .background6 {
   animation-timing-function: ease-in;
   z-index: 2;
 
-  -webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s;
-  -o-animation-delay: 6s;
-  animation-delay: 6s;
+  -webkit-animation-delay: 9s;
+  -moz-animation-delay: 9s;
+  -o-animation-delay: 9s;
+  animation-delay: 9s;
 
   will-change: contents;
   opacity: 0;
-  position: absolute;  
+  position: absolute;
+  width: 100px;
+  height: 100px; 
+  left: 510px;
+  bottom: 480px; 
 }
 
 @-webkit-keyframes step__three__parents__animation {
     100% {
-          width: 70px;
-          height: 70px; 
+
           opacity: 1; 
-          left: 1030px;
-          bottom: 590px;       
+     
     }
 
     0% {
-          width: 70px;
-          height: 70px; 
           opacity: 1; 
-          left: 1030px;
-          bottom: 590px;
 
     }
 }
