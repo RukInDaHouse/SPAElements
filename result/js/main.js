@@ -64,6 +64,7 @@ arrow[0].onclick = function() {
 }
 
 arrow[0].onclick = function() {  
+ document.getElementsByClassName('arrownext')[0].disabled = true;
     var audio = new Audio(); 
         audio.src = 'volume/ep3.mp3'; 
         audio.autoplay = true;
