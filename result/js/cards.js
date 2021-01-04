@@ -5,6 +5,7 @@ var allCards = document.querySelectorAll('.flip-card');
 var nope = document.getElementById('nope');
 var love = document.getElementById('love');
 var next = document.getElementById('next');
+var quizcardbuttons = document.querySelectorAll('quizcard--buttons');
 
 function initCards(card, index) {
   var newCards = document.querySelectorAll('.flip-card:not(.removed)');
@@ -39,9 +40,14 @@ function createButtonListener(love) {
     } else {
       card.classList.toggle('do-flip');
       card.style.zIndex = 1000000000000000000;
-            nextbutton.onclick = function() {
-      card.style.transform = 'translate(-100vw, -100px) rotate(30deg) rotateY(-180deg)';
-      cards[1].classList.remove('hidden');
+      document.getElementById('nope').disabled = true;
+      document.getElementById('love').disabled = true;
+
+      nextbutton.onclick = function() {
+        card.style.transform = 'translate(-100vw, -100px) rotate(30deg) rotateY(-180deg)';
+        cards[1].classList.remove('hidden');
+        document.getElementById('nope').disabled = false;
+        document.getElementById('love').disabled = false;
   };
 
     }
