@@ -3,7 +3,7 @@ var helloscreen = document.getElementsByClassName('helloscreen');
 var container = document.getElementsByClassName('container');
 var audio = document.getElementsByTagName('audio');
 var arrow = document.getElementsByClassName('arrownext');
-var header = document.getElementsByClassName('headercontainer');
+var header = document.getElementsByClassName('headerdisable');
 var mapbackgroundimage = document.getElementsByClassName('mapbackgroundimage');
 
 
@@ -12,6 +12,8 @@ map[2].onclick = function() {
     audio.src = 'volume/ep1.mp3'; 
     audio.autoplay = true; 
     header[0].classList.add('invisible');
+    header[1].classList.add('invisible');
+    header[2].classList.add('invisible');
     helloscreen[0].classList.add('invisible');
     map[5].classList.remove('invisible');
     map[5].classList.add('step__zero');
@@ -29,6 +31,7 @@ map[2].onclick = function() {
 
     setTimeout(function(){
         container[0].classList.remove('invisible');
+        container[0].classList.add('falling-leaves');
     }, 36000);
 
     setTimeout(function(){
@@ -60,20 +63,34 @@ arrow[0].onclick = function() {
     }, 9000);
 }
 
-arrow[1].onclick = function() {  
-    var findElement = container[0];
-    findElement.parentNode.removeChild(findElement);
-    container[0].classList.remove('invisible');
+arrow[0].onclick = function() {  
+    var audio = new Audio(); 
+        audio.src = 'volume/ep3.mp3'; 
+        audio.autoplay = true;
 
     setTimeout(function(){
-        map[2].classList.remove('invisible');
-        map[2].classList.add('fullscreen__leaf');
-    }, 6000);
+        map[0].classList.remove('invisible');
+        map[0].classList.add('fullscreen__leaf');
+    }, 11000);
 
     setTimeout(function(){
         var findElement = container[0];
         findElement.parentNode.removeChild(findElement);
         container[0].classList.remove('invisible');
-    }, 9000);
+        var audio = new Audio(); 
+        audio.src = 'volume/ep4.mp3'; 
+        audio.autoplay = true;
+    }, 14000);
+
+    setTimeout(function(){
+        map[2].classList.remove('invisible');
+        map[2].classList.add('fullscreen__leaf');
+    }, 19000);
+
+    setTimeout(function(){
+        var findElement = container[0];
+        findElement.parentNode.removeChild(findElement);
+        container[0].classList.remove('invisible');
+    }, 21000);
 }
 
