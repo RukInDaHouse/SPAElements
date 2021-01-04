@@ -4,6 +4,7 @@ var container = document.getElementsByClassName('container');
 var audio = document.getElementsByTagName('audio');
 var arrow = document.getElementsByClassName('arrownext');
 var header = document.getElementsByClassName('headercontainer');
+var mapbackgroundimage = document.getElementsByClassName('mapbackgroundimage');
 
 
 map[2].onclick = function() {
@@ -14,6 +15,7 @@ map[2].onclick = function() {
     helloscreen[0].classList.add('invisible');
     map[5].classList.remove('invisible');
     map[5].classList.add('step__zero');
+    mapbackgroundimage[0].classList.add('zoom__map__first__scene');
 
     setTimeout(function(){
     	map[4].classList.remove('invisible');
