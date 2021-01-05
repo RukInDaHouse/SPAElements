@@ -17,12 +17,19 @@ map[2].onclick = function() {
     helloscreen[0].classList.add('invisible');
     map[5].classList.remove('invisible');
     map[5].classList.add('step__zero');
-    mapbackgroundimage[0].classList.add('zoom__map__first__scene');
+    mapbackgroundimage[1].classList.add('zoom__small__parents');
+    mapbackgroundimage[2].classList.add('zoom__small__ballun');
+    mapbackgroundimage[3].classList.add('zoom__small__balluncenter');
+    mapbackgroundimage[4].classList.add('zoom__small__cross');
+    mapbackgroundimage[5].classList.add('zoom__small__pump');
+    mapbackgroundimage[6].classList.add('zoom__small__sign');
+    mapbackgroundimage[7].classList.add('zoom__small__stage');
+
 
     setTimeout(function(){
     	map[4].classList.remove('invisible');
     	map[4].classList.add('fullscreen__leaf');
-    }, 33000);
+    }, 27000);
 
     setTimeout(function(){
     	var findElement = container[0];
