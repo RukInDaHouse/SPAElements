@@ -1324,8 +1324,8 @@ p:last-of-type {
 .popup {
   opacity: 0;
   visibility: hidden;
-  height: 80%;
-  width: 25%;
+  height: 500px;
+  width: 500px;
   flex-shrink: 0;
   border-radius: 3px;
   position: relative;
@@ -1833,4 +1833,23 @@ body.active .background6 {
     10% {
     transform: scale(1.2) translate(-100px, -100px);    
     }
+}
+
+.arrownext {
+  position: absolute;
+  z-index: 5;
+  border-radius: 3px;
+  background: blue;
+  color: white;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 100px;
+  text-align: center;
+  letter-spacing: 1px;
+  bottom: -7px;
+  transition: 0.3s ease-in-out;
+  padding: 7px;
+  cursor: pointer;
+  bottom: 50px;
+  right: 50px;
 }
