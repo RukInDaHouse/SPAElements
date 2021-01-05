@@ -45,7 +45,7 @@ map[2].onclick = function() {
         var audio = new Audio(); 
         audio.src = 'volume/ep2.mp3'; 
         audio.autoplay = true;
-    }, 38000);
+    }, 40000);
 
 }
 

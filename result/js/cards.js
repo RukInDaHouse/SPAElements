@@ -6,6 +6,8 @@ var nope = document.getElementById('nope');
 var love = document.getElementById('love');
 var next = document.getElementById('next');
 var quizcardbuttons = document.querySelectorAll('quizcard--buttons');
+var arrow = document.getElementsByClassName('arrownext');
+
 
 function initCards(card, index) {
   var newCards = document.querySelectorAll('.flip-card:not(.removed)');
@@ -25,7 +27,7 @@ function createButtonListener(love) {
     var cards = document.querySelectorAll('.flip-card:not(.removed)');
     var next = document.querySelectorAll('.next:not(.removed)');
 
-    if (!cards.length) return false;
+    if (!cards.length) document.getElementsByClassName('arrownext')[0].classList.remove('invisible');
 
     var card = cards[0];
     var nextbutton = next[0];
@@ -52,7 +54,7 @@ function createButtonListener(love) {
   };
 
     }
-
+    
     initCards();
     event.preventDefault();
   };
