@@ -819,23 +819,6 @@ transform: scale(1);
   padding-top: 20px;
 }
 
-.quizcard--buttons button {
-  border: 0;
-  border-radius: 4px;
-  padding: 12px 24px;
-  color: white;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  cursor: pointer;
-  margin: 20px;
-}
-
-.quizcard--buttons button:focus {
-  outline: 0;
-}
-
 .flip-card {
   display: inline-block;
   width: 900px;
@@ -852,6 +835,7 @@ transform: scale(1);
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
   will-change: transform;
+  right: 0;
 }
 
 .dont-flip {
@@ -894,46 +878,40 @@ transform: scale(1);
   height: 100%;
 }
 
+.card::after, .card::before {
+  position: absolute;
+  content: "";
+  transition: all 0.5s;
+}
+
 .card {
-  width: 100%;
-  height: 100%;
-  border: 1px solid #FF882A;
-  display: flex;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.inner {
-  width: 100%;
-  border: solid 1px #FF882A;
-  margin: 15px;
-  border-radius: 10px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.middle {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.middle p {
-  background: transparent;
-  margin-top: 6%;
-  margin-bottom: 6%;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  display: inline-block;
+  padding: 20px 40px;
   color: #000;
-  border-radius: 3px;
-  opacity: 0.7;
-  text-align: center;
-  font-weight: 500;
-  position: relative;
-  overflow-wrap: break-word;
+  position: absolute;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 0.4rem;
+  transition: all 0.5s;
+  background: #fff;
+  cursor: pointer;
+  width: 670px;
+  height: 320px;
+  right: 150px;
+}
+.card::before {
+  bottom: -18px;
+  height: 18px;
+  width: 660px;
+  left: 18px;
+  background: #FF882A;
+}
+.card::after {
+  right: -18px;
+  height: 100%;
+  width: 18px;
+  bottom: -18px;
+  background: #FF882A;
 }
 
 .face_text {
@@ -1852,4 +1830,53 @@ body.active .background6 {
   cursor: pointer;
   bottom: 50px;
   right: 50px;
+}
+
+.button__select::after, .button__select::before {
+  position: absolute;
+  content: "";
+  transition: all 0.5s;
+}
+
+.button__select {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #000;
+  transform: translate(-50%, -50%);
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 0.7rem;
+  transition: all 0.5s;
+  background: #fff;
+  cursor: pointer;
+}
+.button__select::before {
+  bottom: -15px;
+  height: 15px;
+  width: 250px;
+  left: 18px;
+  transform: skewX(45deg);
+  background-color: #FF882A;
+}
+.button__select::after {
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  bottom: -18px;
+  transform: skewY(45deg);
+  background-color: #FF882A;
+}
+.button__select:active {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.button__select:active::before {
+  bottom: -5px;
+  height: 5px;
+  left: 3px;
+}
+.button__select:active::after {
+  right: -5px;
+  width: 5px;
+  bottom: -3px;
 }
