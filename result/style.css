@@ -785,7 +785,8 @@ transform: scale(1);
 }
 
 .quizcard {
-  height: 650px;
+  height: 525px;
+  width: 850px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -794,6 +795,8 @@ transform: scale(1);
   -webkit-perspective: 1800px;
   perspective: 1800px;
   background: transparent;
+  right: 0;
+  position: absolute;
 }
 
 .loaded.quizcard {
@@ -814,7 +817,6 @@ transform: scale(1);
 
 .quizcard--buttons {
   -webkit-box-flex: 0;
-  flex: 0 0 100px;
   text-align: center;
   padding-top: 20px;
 }
@@ -822,7 +824,6 @@ transform: scale(1);
 .flip-card {
   display: inline-block;
   width: 900px;
-  height: 450px;
   text-align: center;
   margin: 50px auto;
   position: absolute;
@@ -854,7 +855,6 @@ transform: scale(1);
 
 .flip-card .flip-card-front, .flip-card-back {
   width: 100%;
-  height: 100%;
   position: absolute;
   -o-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -889,7 +889,6 @@ transform: scale(1);
   padding: 20px 40px;
   color: #000;
   position: absolute;
-  vertical-align: middle;
   text-decoration: none;
   font-size: 0.4rem;
   transition: all 0.5s;
@@ -898,6 +897,9 @@ transform: scale(1);
   width: 670px;
   height: 320px;
   right: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card::before {
   bottom: -18px;
@@ -915,12 +917,12 @@ transform: scale(1);
 }
 
 .face_text {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-family: "Roboto", "Arial", sans-serif;
 }
 
 .back_text {
-  font-size: 1.1em;
+  font-size: 0.9rem;
   text-align: center;
   margin: 0;
   line-height: 1.5;
@@ -1841,30 +1843,32 @@ body.active .background6 {
 .button__select {
   display: inline-block;
   padding: 10px 30px;
-  color: #000;
+  color: #FFF;
   transform: translate(-50%, -50%);
   vertical-align: middle;
   text-decoration: none;
-  font-size: 0.7rem;
+  font-size: 1rem;
   transition: all 0.5s;
-  background: #fff;
+  background: #FF882A;
   cursor: pointer;
+  border: none;
+  height: 49px;
+  width: 162px;
+  margin-left: 70px;
 }
 .button__select::before {
-  bottom: -15px;
-  height: 15px;
-  width: 250px;
-  left: 18px;
-  transform: skewX(45deg);
-  background-color: #FF882A;
+  bottom: -5px;
+  height: 5px;
+  width: 162px;
+  left: 5px;
+  background: #FFF;
 }
 .button__select::after {
-  right: -15px;
+  right: -5px;
   height: 100%;
-  width: 15px;
-  bottom: -18px;
-  transform: skewY(45deg);
-  background-color: #FF882A;
+  width: 5px;
+  bottom: -5px;
+  background: #FFF;
 }
 .button__select:active {
   margin-left: 10px;
@@ -1876,6 +1880,60 @@ body.active .background6 {
   left: 3px;
 }
 .button__select:active::after {
+  right: -5px;
+  width: 5px;
+  bottom: -3px;
+}
+
+.button__next::after, .button__next::before {
+  position: absolute;
+  content: "";
+  transition: all 0.5s;
+}
+
+.button__next {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #FF882A;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: all 0.5s;
+  background: #FFF;
+  cursor: pointer;
+  border: none;
+  height: 38px;
+  width: 135px;
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  border: 2px solid #FF882A;
+  font-size: 1rem;
+
+}
+.button__next::before {
+  bottom: -5px;
+  height: 5px;
+  width: 130px;
+  left: 2px;
+  background: #FF882A;
+}
+.button__next::after {
+  right: -5px;
+  height: 100%;
+  width: 5px;
+  bottom: -5px;
+  background: #FF882A;
+}
+.button__next:active {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.button__next:active::before {
+  bottom: -5px;
+  height: 5px;
+  left: 3px;
+}
+.button__next:active::after {
   right: -5px;
   width: 5px;
   bottom: -3px;
