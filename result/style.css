@@ -398,7 +398,8 @@ nav.primary-navigation ul li ul li {
   margin-top: 0px;
   top: 0;
   width: 100vw;
-  z-index: -1;
+  z-index: 6;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 1023px) {
@@ -445,7 +446,7 @@ nav.primary-navigation ul li ul li {
   left: 0;
   width: 15px;
   height: 15px;
-  background: url(../result/images/leaf.svg) no-repeat;
+  background: url(../images/leaf.svg) no-repeat;
   background-size: 100%;
   transform-style: preserve-3d;
   -webkit-backface-visibility: visible;
@@ -556,19 +557,24 @@ nav.primary-navigation ul li ul li {
 
 @keyframes small__zoom__animation {
     0% {
-transform: scale(1);
+      opacity: 0;
 
     }
 
     50% {
- transform: scale(1.03);
+      opacity: 1;
 
     }
 
     100% {
- transform: scale(1);
+      opacity: 0;
 
     }
+}
+
+.selected {
+  top: -57px!important;
+  opacity: 0;
 }
 
 .fullscreen__leaf {
@@ -1870,19 +1876,21 @@ body.active .background6 {
   bottom: -5px;
   background: #FFF;
 }
-.button__select:active {
-  margin-left: 10px;
-  margin-top: 10px;
+.button__select:hover {
+  background: #FFF;
+  color: #FF882A;
 }
-.button__select:active::before {
-  bottom: -5px;
-  height: 5px;
-  left: 3px;
-}
-.button__select:active::after {
-  right: -5px;
-  width: 5px;
+.button__select:hover::before {
   bottom: -3px;
+  height: 3px;
+  width: 160px;
+  background: #FF882A;
+}
+.button__select:hover::after {
+  right: -3px;
+  width: 3px;
+  bottom: -3px;
+  background: #FF882A;
 }
 
 .button__next::after, .button__next::before {
@@ -1924,17 +1932,18 @@ body.active .background6 {
   bottom: -5px;
   background: #FF882A;
 }
-.button__next:active {
-  margin-left: 10px;
-  margin-top: 10px;
+.button__next:hover {
+  background: #FF882A;
+  color: #FFF;
 }
-.button__next:active::before {
-  bottom: -5px;
-  height: 5px;
-  left: 3px;
-}
-.button__next:active::after {
-  right: -5px;
-  width: 5px;
+.button__next:hover::before {
   bottom: -3px;
+  height: 3px;
+  background: transparent;
+}
+.button__next:hover::after {
+  right: -3px;
+  width: 3px;
+  bottom: -3px;
+  background: transparent;
 }
