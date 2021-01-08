@@ -4,10 +4,11 @@
   	<meta charset="UTF-8">
   	<title></title>
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="./style.css">
 
 </head>
-<body onclick="document.body.classList.add('active')">
+<body>
+  
  <header>
         <div class='headercontainer headerdisable'>
             <div class='mobile_nav'>
@@ -68,8 +69,10 @@
             </nav>
         </div>
     </header>
+
 <div class="bigcontainer falling-leaves"></div><div class="container">
-    <div class="ratio16-9 map">
+    <div class="ratio16-9 map">  
+
         <div class="popup-wrapper">
             <div class="popup map helloscreen">
                 <div class="popup-inside">
@@ -81,10 +84,10 @@
                         <div class="background background5"></div>
                         <div class="background background6"></div>
                     </div>
-                </div>
-                <div class="popup-content">    
+                </div><div class="popup-content-background"> </div>
+                <div class="popup-content ">    
                     <div class="inner_card">
-       <span class="close" onclick="document.body.classList.toggle('active');"></span>
+       
 
                     <div class="popup-content-wrapper">
                         <h1>Уважаемый герой!</h1>
@@ -93,38 +96,38 @@
 автоматически. Интерактивная карта условно-бесплатная, на 4 этапе Вам будет
 предложено купить ее либо выйти. Стоимость увлекательного путешествия всего 890 руб.</li>
                         </p>
-                      <div class="map btn-5 btn">Далее</div>
+                      <div class="map button__next">Далее</div>
                     </div>
                 </div></div>
             </div>
         </div>
 		<div class="mapbackgroundimage">
-			<img src="../images/background.svg">
+			<img src="./images/background.svg">
 		</div>
     <div class="planewithnameimage headerdisable">
-      <img src="../images/planewithname.svg">
+      <img src="./images/planewithname.svg">
     </div>
 
     <div class="mapbackgroundimage selected">
-      <img src="../images/parentssmall.svg">
+      <img src="./images/parentssmall.svg">
     </div>
     <div class="mapbackgroundimage selected">
-      <img src="../images/ballunsmall.svg">
+      <img src="./images/ballunsmall.svg">
     </div>
     <div class="mapbackgroundimage selected">
-      <img src="../images/ballunsmallcenter.svg">
+      <img src="./images/ballunsmallcenter.svg">
     </div>
     <div class="mapbackgroundimage selected">
-      <img src="../images/crosssmall.svg">
+      <img src="./images/crosssmall.svg">
     </div>
     <div class="mapbackgroundimage selected">
-      <img src="../images/pumpsmall.svg">
+      <img src="./images/pumpsmall.svg">
     </div>
     <div class="mapbackgroundimage selected">
-      <img src="../images/signsmall.svg">
+      <img src="./images/signsmall.svg">
     </div>
     <div class="mapbackgroundimage selected">
-      <img src="../images/stagesmall.svg">
+      <img src="./images/stagesmall.svg">
     </div>
         </div>
     
@@ -145,10 +148,10 @@
 		<svg class="cloud small slow" viewBox="0 0 762 331"><defs/><path fill="#FFF" d="M715 228h-16l1-16a106 106 0 00-130-103 162 162 0 00-313 40 94 94 0 00-132 79H47c-26 0-47 23-47 52s21 51 47 51h668c26 0 47-23 47-51s-21-52-47-52z"/></svg>
 	</div>
     <div class="map invisible">
-    	<img src="../images/leaf.svg">
+    	<img src="./images/leaf.svg">
     </div>
     <div class="map invisible">
-      <img src="../images/pers.svg">
+      <img src="./images/pers.svg">
     </div>
 
 </div>
@@ -156,14 +159,17 @@
 
 <div class="container invisible">
 		<div class="mapbackgroundimage">
-      <img src="../images/part-01.svg">
+      <img src="./images/part-01.svg">
     </div>
 
         <div class="map invisible">
-      <img src="../images/leaf.svg">
+      <img src="./images/leaf.svg">
     </div>
-    <div class="quizcard_second">
-  <div class="quizcard--cards_second">
+        <div class="fullscreen__leaf__away">
+      <img src="./images/leaf.svg">
+    </div>
+    <div class="quizcard">
+  <div class="quizcard--cards">
     <div class="flip-card">
       <div class="flip-card-front">
         <div class="card">
@@ -461,16 +467,16 @@
             <p class="back_text">Это абсолютно здоровое желание. Но перед тем, как открыть свое дело или выбрать фриланс, убедись на практике в жизнеспособности этого желания – так ты избежишь финансовых потерь. Самый безопасный вариант - устроиться на работу в ту сферу, в которой ты хочешь начать свое дело. Таким образом, ты разберешься в нюансах и подводных камнях выбранной деятельности. Набравшись опыта, ты сможешь начать работать самостоятельно. Для фрилансера будет не лишним наполнить портфолио бесплатными заказами – это облегчит в будущем поиск клиентов. 
 </p>
           </div>
-             <button class="button__next next">Далее</button></div>
+             <button class="button__next next arrow">Далее</button></div>
       </div>
     </div>
   </div>
 
   </div>
 
-  <div class="quizcard--buttons_second">
-    <button class="nope button__select_second" id="nope">Не согласен</button>
-    <button class="yes button__select_second"  id="love">Согласен</button>
+  <div class="quizcard--buttons">
+    <button class="nope button__select" id="nope">Согласен</button>
+    <button class="yes button__select"  id="love">Не согласен</button>
   </div>
 </div>
 <button class="arrownext invisible">Дальше</button>
@@ -479,11 +485,11 @@
 <div class="container invisible">
     <div class="ratio16-9 map">
     <div class="mapbackgroundimage">
-      <img src="../images/background.svg">
+      <img src="./images/background.svg">
     </div>
         </div>
     <div class="fullscreen__leaf__away">
-      <img src="../images/leaf.svg">
+      <img src="./images/leaf.svg">
     </div>
   <div class="clouds map">
 
@@ -502,67 +508,46 @@
     <svg class="cloud small slow" viewBox="0 0 762 331"><defs/><path fill="#FFF" d="M715 228h-16l1-16a106 106 0 00-130-103 162 162 0 00-313 40 94 94 0 00-132 79H47c-26 0-47 23-47 52s21 51 47 51h668c26 0 47-23 47-51s-21-52-47-52z"/></svg>
   </div>
     <div class="step__one">
-      <img src="../images/pers.svg">
+      <img src="./images/pers.svg">
     </div>
     <div class="step__two">
-      <img src="../images/fullplaneman.svg">
+      <img src="./images/fullplaneman.svg">
     </div>
     <div class="step__three">
-      <img src="../images/fullplaneman.svg">
+      <img src="./images/fullplaneman.svg">
     </div>
     <div class="step__four">
-      <img src="../images/fullplaneman.svg">
+      <img src="./images/fullplaneman.svg">
     </div>
     <div class="map invisible">
-      <img src="../images/leaf.svg">
-    </div>
-    <div class="mapbackgroundimage">
-      <img src="../images/parentssmall.svg">
-    </div>
-    <div class="mapbackgroundimage">
-      <img src="../images/ballunsmall.svg">
-    </div>
-    <div class="mapbackgroundimage">
-      <img src="../images/ballunsmallcenter.svg">
-    </div>
-    <div class="mapbackgroundimage">
-      <img src="../images/crosssmall.svg">
-    </div>
-    <div class="mapbackgroundimage">
-      <img src="../images/pumpsmall.svg">
-    </div>
-    <div class="mapbackgroundimage">
-      <img src="../images/signsmall.svg">
-    </div>
-    <div class="mapbackgroundimage">
-      <img src="../images/stagesmall.svg">
+      <img src="./images/leaf.svg">
     </div>
 </div>
 
 <div class="container invisible">
     <div class="mapbackgroundimage">
-      <img src="../images/parents.svg">
+      <img src="./images/parents.svg">
     </div>
 
     <div class="fullscreen__leaf__away">
-      <img src="../images/leaf.svg">
+      <img src="./images/leaf.svg">
     </div>
     
     
 
     <div class="step__one__parents">
-      <img src="../images/pers.svg">
+      <img src="./images/pers.svg">
     </div>
     <div class="step__two__parents">
-      <img src="../images/fullplaneman.svg">
+      <img src="./images/fullplaneman.svg">
     </div>
     <div class="step__three__parents">
-      <img src="../images/fullplaneman.svg">
+      <img src="./images/fullplaneman.svg">
     </div>
   </div>
 
-  <script  src="../js/leaf.js"></script>
-  <script  src="../js/main.js"></script>
-  <script  src="../js/cards.js"></script>
+  <script  src="./js/leaf.js"></script>
+  <script  src="./js/main.js"></script>
+  <script  src="./js/cards.js"></script>
 </body>
 </html>
