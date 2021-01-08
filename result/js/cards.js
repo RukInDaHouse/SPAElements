@@ -42,15 +42,15 @@ function createButtonListener(love) {
     } else {
       card.classList.toggle('do-flip');
       card.style.zIndex = 1000000000000000000;
-        document.getElementById('nope').style.visibility = 'hidden';
-        document.getElementById('love').style.visibility = 'hidden';
+        document.getElementById('nope').style.opacity = '0';
+        document.getElementById('love').style.opacity = '0';
 
       nextbutton.onclick = function() {
         card.style.zIndex = 1000000000000000000;
         card.style.transform = 'translate(-100vw, -100px) rotate(30deg) rotateY(-180deg)';
         cards[1].classList.remove('hidden');
-        document.getElementById('nope').style.visibility = 'visible';
-        document.getElementById('love').style.visibility = 'visible';
+        document.getElementById('nope').style.opacity = '1';
+        document.getElementById('love').style.opacity = '1';
   };
 
     }
