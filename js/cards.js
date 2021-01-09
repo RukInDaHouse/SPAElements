@@ -27,8 +27,6 @@ function createButtonListener(love) {
     var cards = document.querySelectorAll('.flip-card:not(.removed)');
     var next = document.querySelectorAll('.next:not(.removed)');
 
-    if (!cards.length) document.getElementsByClassName('arrownext')[0].classList.remove('invisible');
-
     var card = cards[0];
     var nextbutton = next[0];
 
@@ -39,9 +37,19 @@ function createButtonListener(love) {
       card.style.zIndex = 1000000000000000000;
       card.style.transform = 'translate(100vw, -100px) rotate(-30deg)';
       cards[1].classList.remove('hidden');
+      if (cards.length == 3) {
+        document.getElementById('love').classList.add('invisible');
+        document.getElementById('love__next').classList.remove('invisible');
+      }
     } else {
+          if (cards.length == 2) {
+      document.getElementById('next').classList.add('invisible');
+      document.getElementById('nope__next').classList.remove('invisible');
+    }
       card.classList.toggle('do-flip');
       card.style.zIndex = 1000000000000000000;
+        document.getElementById('nope').disabled = true;
+        document.getElementById('love').disabled = true;
         document.getElementById('nope').style.opacity = '0';
         document.getElementById('love').style.opacity = '0';
 
@@ -49,6 +57,8 @@ function createButtonListener(love) {
         card.style.zIndex = 1000000000000000000;
         card.style.transform = 'translate(-100vw, -100px) rotate(30deg) rotateY(-180deg)';
         cards[1].classList.remove('hidden');
+        document.getElementById('nope').disabled = false;
+        document.getElementById('love').disabled = false;
         document.getElementById('nope').style.opacity = '1';
         document.getElementById('love').style.opacity = '1';
   };
