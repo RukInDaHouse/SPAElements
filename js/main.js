@@ -9,10 +9,7 @@ var mapbackgroundimage = document.getElementsByClassName('mapbackgroundimage');
 
 container[0].onclick = function() {
     document.getElementsByClassName('popup-wrapper')[0].classList.add('actived');
-
 }
-
-
 
 map[2].onclick = function() {
     var audio = new Audio(); 
@@ -77,8 +74,9 @@ arrow[0].onclick = function() {
     }, 9000);
 }
 
-arrow[0].onclick = function() {  
- document.getElementsByClassName('arrownext')[0].disabled = true;
+ document.getElementById('love__next').onclick = function() {  
+ document.getElementById('love__next').disabled = true;
+ document.querySelector('.quizcard').style.opacity = '0';
     var audio = new Audio(); 
         audio.src = 'volume/ep3.mp3'; 
         audio.autoplay = true;
@@ -100,13 +98,48 @@ arrow[0].onclick = function() {
     setTimeout(function(){
         map[2].classList.remove('invisible');
         map[2].classList.add('fullscreen__leaf');
-    }, 30000);
+    }, 32000);
 
     setTimeout(function(){
         var findElement = container[0];
         findElement.parentNode.removeChild(findElement);
         container[0].classList.remove('invisible');
-    }, 21000);
+    }, 32000);
+}
+
+ document.getElementById('nope__next').onclick = function() {  
+ document.getElementById('nope__next').disabled = true;
+ document.querySelector('.quizcard').style.opacity = '0';
+    var audio = new Audio(); 
+        audio.src = 'volume/ep3.mp3'; 
+        audio.autoplay = true;
+
+    setTimeout(function(){
+        map[0].classList.remove('invisible');
+        map[0].classList.add('fullscreen__leaf');
+    }, 12000);
+
+    setTimeout(function(){
+        var findElement = container[0];
+        findElement.parentNode.removeChild(findElement);
+        container[0].classList.remove('invisible');
+        var audio = new Audio(); 
+        audio.src = 'volume/ep4.mp3'; 
+        audio.autoplay = true;
+    }, 16000);
+
+    setTimeout(function(){
+        map[2].classList.remove('invisible');
+        map[2].classList.add('fullscreen__leaf');
+    }, 32000);
+
+    setTimeout(function(){
+        var findElement = container[0];
+        findElement.parentNode.removeChild(findElement);
+        container[0].classList.remove('invisible');
+    }, 32000);
+
+
 }
 
 
