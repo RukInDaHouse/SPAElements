@@ -33,7 +33,7 @@ map[2].onclick = function() {
     setTimeout(function(){
     	map[4].classList.remove('invisible');
     	map[4].classList.add('fullscreen__leaf');
-    }, 27000);
+    }, 29000);
 
     setTimeout(function(){
     	var findElement = container[0];
@@ -42,13 +42,6 @@ map[2].onclick = function() {
 
     setTimeout(function(){
         container[0].classList.remove('invisible');
-        container[0].classList.add('falling-leaves');
-    }, 36000);
-
-    setTimeout(function(){
-        var audio = new Audio(); 
-        audio.src = 'volume/ep2.mp3'; 
-        audio.autoplay = true;
         'use strict';
 
 var quizcardContainer = document.querySelector('.quizcard');
@@ -128,11 +121,12 @@ var loveListener = createButtonListener(true);
 
 nope.addEventListener('click', nopeListener);
 love.addEventListener('click', loveListener);
+    }, 36000);
 
-
-
-
-
+    setTimeout(function(){
+        var audio = new Audio(); 
+        audio.src = 'volume/ep2.mp3'; 
+        audio.autoplay = true;
     }, 40000);
 
 }
@@ -141,24 +135,7 @@ map[0].onclick = function() {
     helloscreen[0].classList.add('flashmodal');
 }
 
-arrow[0].onclick = function() {  
-    var findElement = container[0];
-    findElement.parentNode.removeChild(findElement);
-    container[0].classList.remove('invisible');
-
-    setTimeout(function(){
-        map[2].classList.remove('invisible');
-        map[2].classList.add('fullscreen__leaf');
-    }, 6000);
-
-    setTimeout(function(){
-        var findElement = container[0];
-        findElement.parentNode.removeChild(findElement);
-        container[0].classList.remove('invisible');
-    }, 9000);
-}
-
- document.getElementById('love__next').onclick = function() {  
+    document.getElementById('love__next').onclick = function() {  
  document.getElementById('love__next').disabled = true;
  document.querySelector('.quizcard').style.opacity = '0';
     var audio = new Audio(); 
@@ -168,7 +145,7 @@ arrow[0].onclick = function() {
     setTimeout(function(){
         map[0].classList.remove('invisible');
         map[0].classList.add('fullscreen__leaf');
-    }, 12000);
+    }, 8000);
 
     setTimeout(function(){
         var findElement = container[0];
@@ -182,7 +159,7 @@ arrow[0].onclick = function() {
     setTimeout(function(){
         map[2].classList.remove('invisible');
         map[2].classList.add('fullscreen__leaf');
-    }, 32000);
+    }, 25000);
 
     setTimeout(function(){
         var findElement = container[0];
@@ -216,82 +193,49 @@ arrow[0].onclick = function() {
     setTimeout(function(){
         map[2].classList.remove('invisible');
         map[2].classList.add('fullscreen__leaf');
-    }, 32000);
+    }, 25000);
 
     setTimeout(function(){
         var findElement = container[0];
         findElement.parentNode.removeChild(findElement);
         container[0].classList.remove('invisible');
+            var audio = new Audio(); 
+        audio.src = 'volume/ep6.mp3'; 
+        audio.autoplay = true;
     }, 32000);
 }
 
 document.getElementById('love__next_second').onclick = function() {  
  document.getElementById('love__next_second').disabled = true;
  document.querySelector('.quizcard_second').style.opacity = '0';
+ var map = document.getElementsByClassName('map');
+
     var audio = new Audio(); 
-        audio.src = 'volume/ep3.mp3'; 
+        audio.src = 'volume/ep6.mp3'; 
         audio.autoplay = true;
+    map[0].classList.remove('invisible');
+    map[1].classList.remove('invisible');
+    map[2].classList.remove('invisible');
+    map[0].classList.add('step__one__parents');
+    map[1].classList.add('step__two__parents');
+    map[2].classList.add('step__three__parents');
 
-    setTimeout(function(){
-        map[0].classList.remove('invisible');
-        map[0].classList.add('fullscreen__leaf');
-    }, 12000);
-
-    setTimeout(function(){
-        var findElement = container[0];
-        findElement.parentNode.removeChild(findElement);
-        container[0].classList.remove('invisible');
-        var audio = new Audio(); 
-        audio.src = 'volume/ep4.mp3'; 
-        audio.autoplay = true;
-    }, 16000);
-
-    setTimeout(function(){
-        map[2].classList.remove('invisible');
-        map[2].classList.add('fullscreen__leaf');
-    }, 32000);
-
-    setTimeout(function(){
-        var findElement = container[0];
-        findElement.parentNode.removeChild(findElement);
-        container[0].classList.remove('invisible');
-    }, 32000);
 }
 
  document.getElementById('nope__next_second').onclick = function() {  
  document.getElementById('nope__next_second').disabled = true;
  document.querySelector('.quizcard_second').style.opacity = '0';
+ var map = document.getElementsByClassName('map');
+
     var audio = new Audio(); 
-        audio.src = 'volume/ep3.mp3'; 
+        audio.src = 'volume/ep6.mp3'; 
         audio.autoplay = true;
-
-
-    setTimeout(function(){
-        map[0].classList.remove('invisible');
-        map[0].classList.add('fullscreen__leaf');
-    }, 12000);
-
-    setTimeout(function(){
-        var findElement = container[0];
-        findElement.parentNode.removeChild(findElement);
-        container[0].classList.remove('invisible');
-        var audio = new Audio(); 
-        audio.src = 'volume/ep4.mp3'; 
-        audio.autoplay = true;
-    }, 16000);
-
-    setTimeout(function(){
-        map[2].classList.remove('invisible');
-        map[2].classList.add('fullscreen__leaf');
-    }, 32000);
-
-    setTimeout(function(){
-        var findElement = container[0];
-        findElement.parentNode.removeChild(findElement);
-        container[0].classList.remove('invisible');
-    }, 32000);
-
-
+    map[0].classList.remove('invisible');
+    map[1].classList.remove('invisible');
+    map[2].classList.remove('invisible');
+    map[0].classList.add('step__one__parents');
+    map[1].classList.add('step__two__parents');
+    map[2].classList.add('step__three__parents');
 }
 
 
