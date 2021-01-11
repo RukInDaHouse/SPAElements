@@ -585,8 +585,8 @@ nav.primary-navigation ul li ul li {
 }
 
 .fullscreen__leaf {
-  -webkit-animation: fullscreen__leaf__scoping 3s alternate forwards;
-  -moz-animation: fullscreen__leaf__scoping 3s alternate forwards;
+  -webkit-animation: fullscreen__leaf__scoping 7s alternate forwards;
+  -moz-animation: fullscreen__leaf__scoping 7s alternate forwards;
   animation: fullscreen__leaf__scoping 7s alternate forwards;
 
   -webkit-animation-timing-function: ease-in;
@@ -621,9 +621,9 @@ nav.primary-navigation ul li ul li {
     }
 
     100% {
-    transform: translateX(-1300px) translateY(-700px) rotate(0deg);
-    width: 240vw;
-    height: 240vh;  
+    transform: translateX(-1650px) translateY(-680px) rotate(0deg);
+    width: 260vw;
+    height: 240vh;
     }
 }
 
@@ -647,8 +647,8 @@ nav.primary-navigation ul li ul li {
 
 @-webkit-keyframes fullscreen__leaf__away__scoping {
     0% {
-    transform: translateX(-1300px) translateY(-700px) rotate(0deg);
-    width: 240vw;
+    transform: translateX(-1350px) translateY(-130px) rotate(0deg);
+    width: 260vw;
     height: 240vh;  
 
 
@@ -1706,6 +1706,8 @@ p:last-of-type {
   -moz-animation-delay: 3s;
   -o-animation-delay: 3s;
     animation-delay: 3s; 
+      pointer-events: none;
+
 }
 
 @-webkit-keyframes step__one__parents__animation {
@@ -1743,6 +1745,8 @@ p:last-of-type {
   height: 140px; 
   left: 220px;
   bottom: 480px;   
+    pointer-events: none;
+
 }
 
 @-webkit-keyframes step__two__parents__animation {
@@ -1777,6 +1781,8 @@ p:last-of-type {
   height: 100px; 
   left: 510px;
   bottom: 480px; 
+    pointer-events: none;
+
 }
 
 @-webkit-keyframes step__three__parents__animation {
@@ -2008,4 +2014,119 @@ transform: rotate(-45deg);
   margin-right: -50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+
+.quizcard_second {
+  height: 525px;
+  width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -moz-transform: perspective(1800px);
+  -webkit-perspective: 1800px;
+  perspective: 1800px;
+  background: transparent;
+  right: 0;
+  position: absolute;
+}
+.quizcard--cards_second {
+  -webkit-box-flex: 1;
+  flex-grow: 2;
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  z-index: 1;
+}
+
+.quizcard--buttons_second {
+  -webkit-box-flex: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+
+
+.flip-card_second {
+  display: inline-block;
+  width: 900px;
+  text-align: center;
+  margin: 50px auto;
+  position: absolute;
+  -o-transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+  -webkit-transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+  -ms-transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.5s ease-out, opacity 0.2s ease-out;
+  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  will-change: transform;
+  right: 0;
+}
+
+.flip-card_second .flip-card-front, .flip-card-back {
+  width: 100%;
+  position: absolute;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 2;
+  background: transparent;
+  color: #000;
+  padding: 20px 40px;
+}
+
+.flip-card_second .flip-card-front {
+  border-radius: 7px;
+}
+
+.flip-card_second .flip-card-back {
+  -o-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  height: 100%;
+}
+
+.card_second::after, .card_second::before {
+  position: absolute;
+  content: "";
+  transition: all 0.5s;
+}
+
+.card_second {
+  display: inline-block;
+  padding: 30px;
+  color: #000;
+  position: absolute;
+  text-decoration: none;
+  font-size: 0.4rem;
+  transition: all 0.5s;
+  background: #fff;
+  width: 670px;
+  height: 320px;
+  right: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_second::before {
+  bottom: -18px;
+  height: 18px;
+  width: 660px;
+  left: 18px;
+  background: #FF882A;
+}
+.card_second::after {
+  right: -18px;
+  height: 100%;
+  width: 18px;
+  bottom: -18px;
+  background: #FF882A;
 }
