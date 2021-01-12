@@ -36,12 +36,12 @@ function createButtonListener(love) {
       card.style.zIndex = 1000000000000000000;
       card.style.transform = 'translate(100vw, -100px) rotate(-30deg)';
       cards[1].classList.remove('hidden');
-      if (cards.length == 2) {
+      if (cards.length == 3) {
         document.getElementById('love_second').classList.add('invisible');
         document.getElementById('love__next_second').classList.remove('invisible');
       }
     } else {
-          if (cards.length == 1) {
+          if (cards.length == 2) {
       document.getElementById('next_second').classList.add('invisible');
       document.getElementById('nope__next_second').classList.remove('invisible');
     }

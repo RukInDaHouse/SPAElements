@@ -237,6 +237,9 @@ document.getElementById('love__next_second').onclick = function() {
     map[0].classList.remove('invisible');
     map[1].classList.remove('invisible');
     map[2].classList.remove('invisible');
+    map[3].classList.remove('invisible');
+    map[4].classList.remove('invisible');
+    map[5].classList.remove('invisible');
     map[0].classList.add('step__one__parents');
     map[1].classList.add('step__two__parents');
     map[2].classList.add('step__three__parents');
@@ -257,6 +260,9 @@ document.getElementById('love__next_second').onclick = function() {
     map[0].classList.remove('invisible');
     map[1].classList.remove('invisible');
     map[2].classList.remove('invisible');
+    map[3].classList.remove('invisible');
+    map[4].classList.remove('invisible');
+    map[5].classList.remove('invisible');
     map[0].classList.add('step__one__parents');
     map[1].classList.add('step__two__parents');
     map[2].classList.add('step__three__parents');
