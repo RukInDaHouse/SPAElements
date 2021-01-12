@@ -907,7 +907,7 @@ nav.primary-navigation ul li ul li {
   font-size: 0.4rem;
   transition: all 0.5s;
   background: #fff;
-  width: 670px;
+  width: 700px;
   height: 320px;
   right: 150px;
   display: flex;
@@ -917,7 +917,7 @@ nav.primary-navigation ul li ul li {
 .card::before {
   bottom: -18px;
   height: 18px;
-  width: 660px;
+  width: 690px;
   left: 18px;
   background: #FF882A;
 }
@@ -1997,8 +1997,8 @@ p:last-of-type {
   height: 38px;
   width: 135px;
   position: absolute;
-  right: 35px;
-  bottom: 35px;
+  right: 15px;
+  bottom: 10px;
   border: 2px solid #FF882A;
   font-size: 1rem;
   text-align: center;
