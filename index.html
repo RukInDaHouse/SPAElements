@@ -5,7 +5,7 @@
   	<title></title>
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel="stylesheet" href="./style.css">
-
+<script src="https://use.fontawesome.com/b3c477e10e.js"></script>
 </head>
 <body>
 
@@ -70,7 +70,14 @@
         </div>
     </header>
 
-<div class="bigcontainer  falling-leaves"></div><div class="container" style="cursor: pointer;">
+<div class="bigcontainer falling-leaves">
+  <span class="close closewind">
+    <i class="fa fa-times" aria-hidden="true" id="close__game"></i>
+    <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+    <i class="fa fa-volume-off" aria-hidden="true"></i>
+  </span>
+</div>
+<div class="container" style="cursor: pointer;">
     <div class="ratio16-9 map">  
 
         <div class="popup-wrapper">
@@ -92,9 +99,9 @@
                     <div class="popup-content-wrapper">
                         <h1>Уважаемый герой!</h1>
                         <p>
-<li>После того как вы нажмете на кнопку Ок, звук включится
-автоматически. Интерактивная карта условно-бесплатная, на 4 этапе Вам будет
-предложено купить ее либо выйти. Стоимость увлекательного путешествия всего 890 руб.</li>
+После того как вы нажмете на кнопку Ок, звук включится
+автоматически. <br>Интерактивная карта условно-бесплатная, на 4 этапе Вам будет
+предложено купить ее либо выйти. Стоимость увлекательного путешествия всего 890 руб.
                         </p>
                       <div class="map button__next">Далее</div>
                     </div>
@@ -757,9 +764,9 @@
   </div>
 
   <div class="quizcard--buttons_second">
-    <button class="nope button__select" id="nope_second">Согласен</button>
-    <button class="yes button__select" id="love_second">Не согласен</button>
-    <button class="yes button__select invisible" id="love__next_second">Не согласен</button>
+    <button class="nope button__select" id="nope_second">Говорят</button>
+    <button class="yes button__select" id="love_second">Не говорят</button>
+    <button class="yes button__select invisible" id="love__next_second">Не говорят</button>
   </div>
 </div>
 </div>

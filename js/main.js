@@ -5,10 +5,17 @@ var audio = document.getElementsByTagName('audio');
 var arrow = document.getElementsByClassName('arrownext');
 var header = document.getElementsByClassName('headerdisable');
 var mapbackgroundimage = document.getElementsByClassName('mapbackgroundimage');
+var close__game = document.getElementById('close__game');
 
 
 container[0].onclick = function() {
     document.getElementsByClassName('popup-wrapper')[0].classList.add('actived');
+}
+
+close__game.onclick = function() {
+    header[0].classList.remove('invisible');
+    container[0].classList.add('invisible');
+    document.getElementsByClassName('bigcontainer')[0].classList.add('invisible');
 }
 
 map[2].onclick = function() {
