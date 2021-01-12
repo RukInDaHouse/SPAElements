@@ -158,10 +158,13 @@ map[0].onclick = function() {
         var findElement = container[0];
         findElement.parentNode.removeChild(findElement);
         container[0].classList.remove('invisible');
+    }, 16000);
+
+    setTimeout(function(){
         var audio = new Audio(); 
         audio.src = 'volume/ep4.mp3'; 
         audio.autoplay = true;
-    }, 16000);
+    }, 18000);
 
     setTimeout(function(){
         map[2].classList.remove('invisible');
@@ -173,6 +176,12 @@ map[0].onclick = function() {
         findElement.parentNode.removeChild(findElement);
         container[0].classList.remove('invisible');
     }, 32000);
+
+    setTimeout(function(){
+        var audio = new Audio(); 
+        audio.src = 'volume/ep5.mp3'; 
+        audio.autoplay = true;
+    }, 35000);
 }
 
  document.getElementById('nope__next').onclick = function() {  
@@ -192,10 +201,13 @@ map[0].onclick = function() {
         var findElement = container[0];
         findElement.parentNode.removeChild(findElement);
         container[0].classList.remove('invisible');
+    }, 16000);
+
+    setTimeout(function(){
         var audio = new Audio(); 
         audio.src = 'volume/ep4.mp3'; 
         audio.autoplay = true;
-    }, 16000);
+    }, 18000);
 
     setTimeout(function(){
         map[2].classList.remove('invisible');
@@ -206,10 +218,12 @@ map[0].onclick = function() {
         var findElement = container[0];
         findElement.parentNode.removeChild(findElement);
         container[0].classList.remove('invisible');
-            var audio = new Audio(); 
-        audio.src = 'volume/ep6.mp3'; 
-        audio.autoplay = true;
     }, 32000);
+    setTimeout(function(){
+        var audio = new Audio(); 
+        audio.src = 'volume/ep5.mp3'; 
+        audio.autoplay = true;
+    }, 35000);
 }
 
 document.getElementById('love__next_second').onclick = function() {  
@@ -226,6 +240,9 @@ document.getElementById('love__next_second').onclick = function() {
     map[0].classList.add('step__one__parents');
     map[1].classList.add('step__two__parents');
     map[2].classList.add('step__three__parents');
+    map[3].classList.add('step__four__parents');
+    map[4].classList.add('step__five__parents');
+    map[5].classList.add('step__six__parents');
 
 }
 
@@ -243,6 +260,9 @@ document.getElementById('love__next_second').onclick = function() {
     map[0].classList.add('step__one__parents');
     map[1].classList.add('step__two__parents');
     map[2].classList.add('step__three__parents');
+    map[3].classList.add('step__four__parents');
+    map[4].classList.add('step__five__parents');
+    map[5].classList.add('step__six__parents');
 }
 
 
